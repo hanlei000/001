@@ -1,24 +1,24 @@
 /*#include<stdio.h>
-
-int main()
-
-{
-	int A = 3, B = 4;
-
-	printf("%d,%d", (A, B), (B, A));
-
-	return 0;
-
-}*/
-#include<stdio.h>
-int main()
+long long int r(long m, long n)
 {
 
-	int i = 1, j = 2, k = 3;
 
-	if (i++ == 1 && (++j == 3 || k++ == 3))
+	long long int  c;
 
-		printf("%d %d %d\n", i, j, k);
-	return 0;
 
+	while (n != 0)
+	{
+		c = m % n; m = n; n = c;
+	}
+	return m;
 }
+int main()
+{
+	long int i, j;
+	if (i <= 0 || j <= 0)
+		printf("Input Error");
+	scanf_s("%ld %ld", &i, &j);
+	printf("%lld %lld", r(i, j), (i * j) / r(i, j));
+
+	return 0;
+}*/
